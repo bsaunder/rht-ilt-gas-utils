@@ -15,8 +15,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "import/prefer-default-export": "error",
-    "no-unused-vars": "warn"
+    "import/prefer-default-export": "error"
   },
   "globals": {
     "OAuth1": true,
