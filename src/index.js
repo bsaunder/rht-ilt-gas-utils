@@ -1,14 +1,17 @@
-import doGet from './server/webapp';
-import './es6';
+/**
+ * Creates a Google Doc and sends an email to the current user with a link to the doc.
+ */
+function createAndSendDocument() {
+  const email = Session.getActiveUser().getEmail();
 
-global.doGet = doGet;
+  // Get the name of the document to use as an email subject line.
+  const subject = 'This is a GAS Test';
 
-global.sendmail = (email = Session.getActiveUser().getEmail()) => {
-  const htmlBody = `
-    <p>This email was sent using the <a href="https://www.labnol.org/internet/google-apps-script-developers/32305/">Apps Script Starter</a></p>
-    <p>For assistance, please tweet <a href="https://twitter.com/labnol">@labnol</a></p>
-  `;
+  // Append a new string to the "url" variable to use as an email body.
+  const body = `Test Test Test`;
 
-  const textBody = htmlBody.replace(/<[^>]+>/g, ' ');
-  GmailApp.sendEmail(email, 'Hello from Google Apps Script', textBody, { htmlBody });
-};
+  // Send yourself an email with a link to the document.
+  GmailApp.sendEmail(email, subject, body);
+}
+
+global.createAndSendDocument = createAndSendDocument;
