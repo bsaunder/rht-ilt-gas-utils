@@ -1,24 +1,23 @@
 {
-  "name": "apps-script-starter",
-  "version": "4.12.0",
+  "name": "rht-ilt-gas-utils",
+  "version": "0.0.1",
   "description": "Setup a local development environment for Google Apps Script",
   "author": {
-    "name": "Amit Agarwal",
-    "email": "amit@labnol.org",
-    "url": "https://www.labnol.org"
+    "name": "Bryan Saunders",
+    "email": "bsaunder@redhat.com",
+    "url": "https://www.redhat.com"
   },
-  "homepage": "https://digitalinspiration.com/",
-  "license": "MIT",
+  "license": "GPLv3",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack",
     "upload": "clasp push",
-    "deploy": "npm run build && npm run upload",
+    "pull": "clasp pull",
+    "deploy": "npm run upload",
     "deploy:prod": "cross-env NODE_ENV=production npm run deploy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/labnol/apps-script-starter.git"
+    "url": "git+https://github.com/bsaunder/rht-ilt-gas-utils"
   },
   "keywords": [
     "google-apps-script",
